@@ -1,5 +1,6 @@
 import random
 import allure
+import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains as AC
 from page_objects.base_page import BasePage
@@ -54,6 +55,7 @@ class MainPage(BasePage):
     @allure.step("Click on the recommended product card")
     def click_featured_product(self, index=0):
         self.logger.info("Click on the recommended product card")
+        time.sleep(5)
         if index == 0:
             self.click(self.FEATURED_PRODUCT_NAME)
         else:
