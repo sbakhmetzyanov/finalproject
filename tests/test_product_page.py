@@ -8,8 +8,8 @@ from page_objects.product_page import ProductPage
 @allure.title("Checking the transition to the iPhone product page")
 def test_product_page_iphone_card_url(browser):
     MainPage(browser) \
-        .click_featured_product(0) \
-        .wait_url("/en-gb/product/macbook")
+        .click_featured_product(1) \
+        .wait_url("/en-gb/product/iphone")
 
 
 @allure.feature("Product page")
